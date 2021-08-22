@@ -210,6 +210,8 @@ def run(weights='yolov5s.pt',  # model.pt path(s)
 
             # Stream results
             if view_img:
+                cv2.namedWindow(str(p), cv2.WND_PROP_FULLSCREEN)
+                cv2.setWindowProperty(str(p), cv2.WND_PROP_FULLSCREEN, cv2.WINDOW_FULLSCREEN)
                 cv2.imshow(str(p), im0)
                 cv2.waitKey(1)  # 1 millisecond
 
